@@ -1,0 +1,2 @@
+# binary search
+- método de busca eficiente que tem como ideia principal a divisão total das possibilidades ORDENADAS por 2 e a comparação do numero do meio com o alvo. Se alvo for maior, descarta todos numeros menores e faz divisão  e comparação novamente até encontrAR o resultado ou retorna -1 caso não encontre. 
