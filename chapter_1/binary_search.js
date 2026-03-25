@@ -1,16 +1,14 @@
 function binarySearch (array, target) {
-  let middle;
-  let newArray = array;
-  while (newArray.length > 0) {
-    console.log('processou')
-    middle = Math.floor(newArray.length / 2);
-    const element = newArray[middle]
-    if (element === target) {
+  let low = 0;
+  let high = array.length - 1;
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2)
+    if (array[middle] === target) {
       return middle;
-    } else if (element > target) {
-      newArray = newArray.slice(0, middle)
-    } else if (element < target) {
-      newArray = newArray.slice(middle + 1, newArray.length)
+    } else if (array[middle] > target) {
+      high = middle -1
+    } else {
+      low = middle + 1
     }
   }
   return -1
