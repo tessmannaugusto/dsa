@@ -1,0 +1,3 @@
+# selection sort algorithym
+- algoritmo utilizado para organizar elementos de acordo com um valor (menor para maior, mais antigo para mais novo, etc)
+- precisa passar por todos elementos n vezes, ou seja, tempo de execução O(n²). Na primeira vez que roda a lista ele lê todos elementos para entender qual elemento tem a valor maior, por exemplo. Na segunda roda a lista de novo com um elemento a menos.
