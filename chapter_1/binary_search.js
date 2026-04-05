@@ -19,7 +19,7 @@ function binarySearchFirstOcurrence (array, target) {
   let high = array.length -1;
   let result = -1;
   while (low <= high) {
-    const middle = ((low + high) / 2);
+    const middle = Math.floor((low + high) / 2);
     const guess = array[middle];
     if (guess === target) {
       result = middle;
@@ -51,4 +51,26 @@ function binarySearchLastOcurrence (array, target) {
   }
   return result;
 }
-export { binarySearch, binarySearchFirstOcurrence, binarySearchLastOcurrence }
+
+function binarySearchSquareRoot (target) {
+  let low = 0;
+  let high = target;
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2 )
+    const number = middle * middle
+    if (target === number) {
+      return middle
+    } else if (number < target) {
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+}
+
+function binarySearchFirstAndLastOcurrence (array, target) {
+  const firstOcurrence = binarySearchFirstOcurrence(array, target);
+  const lastOcurrence = binarySearchLastOcurrence(array, target);
+  return [firstOcurrence, lastOcurrence]
+}
+export { binarySearch, binarySearchFirstOcurrence, binarySearchLastOcurrence, binarySearchSquareRoot, binarySearchFirstAndLastOcurrence }

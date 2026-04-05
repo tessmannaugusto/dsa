@@ -8,6 +8,21 @@ function sumArrayElements(array) {
   );
 }
 
+function getBiggestEqualSquareSubtraction (width, height) { // implementação mais eficiente com módulo e inversão de width por height pra cobrir alteração de maior e menor
+  if (width === height) return width;
+  if (width < height) {
+    return getBiggestEqualSquareSubtraction(width, height - width)
+  } else {
+    return getBiggestEqualSquareSubtraction(width - height, height)
+  }
+}
+
+function getBiggestEqualSquareModule (width, height) { // implementação mais eficiente com módulo e inversão de width por height pra cobrir alteração de maior e menor
+  if (height === 0) return width;
+  console.log(`width: ${width} X height: ${height}`)
+  return getBiggestEqualSquareModule(height, width % height)
+}
 
 
-export { sumArrayElements }
+
+export { sumArrayElements, getBiggestEqualSquareModule, getBiggestEqualSquareSubtraction }
