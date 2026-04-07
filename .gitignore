@@ -144,4 +144,4 @@ vite.config.ts.timestamp-*
 
 # personal notes
 plan.md
-reports/
+reports/.env

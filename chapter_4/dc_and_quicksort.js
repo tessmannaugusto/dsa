@@ -8,6 +8,28 @@ function sumArrayElements(array) {
   );
 }
 
+function sumElementsRecursive(array) {
+  if (array.length === 0) {
+    return 0
+  }
+  return array[0] + sumArrayElements(array.slice(1))
+}
+
+function countElementsInArrayRecursive (array) {
+  if (array.length === 0) return 0;
+
+  return 1 + countElementsInArrayRecursive(array.slice(1))
+}
+
+function findBiggestNumberRecursive (array) {
+  let result = -1;
+  if (array.length === 0) return result
+  if (array[0] > result) {
+    result = array[0]
+  }
+  findBiggestNumberRecursive(array.slice(1))
+}
+
 function getBiggestEqualSquareSubtraction (width, height) { // implementação mais eficiente com módulo e inversão de width por height pra cobrir alteração de maior e menor
   if (width === height) return width;
   if (width < height) {
@@ -25,4 +47,4 @@ function getBiggestEqualSquareModule (width, height) { // implementação mais e
 
 
 
-export { sumArrayElements, getBiggestEqualSquareModule, getBiggestEqualSquareSubtraction }
+export { sumArrayElements, getBiggestEqualSquareModule, getBiggestEqualSquareSubtraction, sumElementsRecursive, countElementsInArrayRecursive, findBiggestNumberRecursive }
