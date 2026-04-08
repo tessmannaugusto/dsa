@@ -22,7 +22,8 @@ Transform technical DSA notes and code implementations into engaging audiobook s
 *   **Logic over Syntax:** Never read code characters (e.g., "let i equals zero"). Instead, describe the *action* (e.g., "We initialize our pointer at the start of the list").
 *   **Pure Text Only:** Do not include Markdown formatting. Use plain text and punctuation (periods, commas, ellipses) only.
 *   **Conversational Flow:** Use transitions like "Now, let's look at how this works in practice" or "Imagine you're searching for a name in a phone book."
-*   **Structure:** Follow the standard Intro -> Concept -> Implementation Walkthrough -> Outro format.
+*   **Expand Use Cases:** Always include at least two additional real-world use cases for the algorithm or data structure being discussed, beyond what is found in the source notes. Briefly explain how it's applied in those contexts using the same conversational style.
+*   **Structure:** Follow the standard Intro -> Concept -> Implementation Walkthrough -> Real-world Use Cases -> Outro format.
 
 ## Related Resources
 

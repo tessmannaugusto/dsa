@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 # personal notes
 plan.md
 reports/.env
+
+# generated audio formats
+*.mp3

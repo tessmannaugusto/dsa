@@ -1,0 +1,17 @@
+Welcome back to our Data Structures and Algorithms series. Today, we're exploring Chapter 2, Arrays, Linked Lists, and Selection Sort.
+
+Imagine you're at the cinema with your friends. If you want to sit together, you need a block of seats that are right next to each other. This is exactly how an array works in memory... it's a contiguous block of space. This makes reading very fast because if you know where the first seat is, you know exactly where the fifth seat is. In technical terms, we call this constant time, or O 1. But there's a catch. If another friend joins later and the seat next to you is already taken, you all have to move to a new spot that fits everyone. This makes inserting or deleting elements slow... it's linear time, or O n.
+
+Now, think of a treasure hunt where each clue tells you where the next one is. This is a linked list. Your items can be scattered anywhere in memory, as long as each one points to the address of the next. This is great for adding or removing items... you just find any empty spot and update the pointer. That's constant time. But if you want to read the last item, you have to start at the very beginning and follow every single link until you get there. That's why reading in a linked list is linear time.
+
+In JavaScript, we often use standard arrays which are flexible and dynamic, but if we need that strict, contiguous memory performance, we can use specialized types like Int 32 Array. These ensure our data stays packed together for maximum efficiency.
+
+Now, let's look at how we can use these structures to organize data with the Selection Sort algorithm. Imagine you have a list of numbers and you want to sort them from smallest to largest. The logic is straightforward: we look through the entire list to find the smallest value, remove it, and add it to a new, sorted list. Then we repeat this process for the remaining items until the original list is empty.
+
+In our code, we implement a helper function called search smaller. It starts by assuming the first item is the smallest, then it iterates through the rest of the array. If it finds something smaller, it updates its record. Our main selection sort function then uses this index to pull the item out of the original array and push it into our new, organized collection. Because we have to scan the entire list once for every single item, the performance is O n squared.
+
+Beyond these simple examples, arrays and linked lists are everywhere. For instance, arrays are the backbone of image processing. Every digital photo you see is essentially a massive array of pixel data, where each element represents a color value. They're also used for lookup tables, providing near-instant access to precomputed values like mathematical constants or configuration settings.
+
+Linked lists, on the other hand, shine in dynamic environments. Think about the undo and redo functionality in your favorite text editor. Each action is a node in a list that points to the previous and next state, allowing you to move through your history effortlessly. They're also perfect for music player playlists, where you want to be able to add, remove, or rearrange songs without having to shift thousands of other items in memory.
+
+That's it for our look at arrays, linked lists, and selection sort. Next time, we'll dive into recursion and the call stack. See you then!

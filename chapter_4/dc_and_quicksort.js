@@ -45,6 +45,14 @@ function getBiggestEqualSquareModule (width, height) { // implementação mais e
   return getBiggestEqualSquareModule(height, width % height)
 }
 
+function quicksort(array) {
+  if (array.length < 2) return array; // caso base
 
+  const pivot = array[0];
+  const less = array.slice(1).filter(i => i <= pivot);
+  const greater = array.slice(1).filter(i => i > pivot);
 
-export { sumArrayElements, getBiggestEqualSquareModule, getBiggestEqualSquareSubtraction, sumElementsRecursive, countElementsInArrayRecursive, findBiggestNumberRecursive }
+  return [...quicksort(less), pivot, ...quicksort(greater)];
+}
+
+export { sumArrayElements, getBiggestEqualSquareModule, getBiggestEqualSquareSubtraction, sumElementsRecursive, countElementsInArrayRecursive, findBiggestNumberRecursive, quicksort }
